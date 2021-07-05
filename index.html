@@ -39,18 +39,18 @@
                 <label  for="gender" style="display: block;">Hobi :</label>
                
                     <label class="per-checkbox">
-                        <input type="checkbox" name="hobby" value="coding">
+                        <input type="checkbox"  name="hobby" value="coding">
                         <span>Coding</span>
                      </label>
               
                      <label class="per-checkbox">
-                        <input type="checkbox" name="hobby" value="sing">
+                        <input type="checkbox"  name="hobby" value="sing">
                         <span>Menyanyi</span>
                      </label>
                     
                     
                      <label class="per-checkbox">
-                        <input type="checkbox" name="hobby" value="sport">
+                        <input type="checkbox"  name="hobby" value="sport">
                         <span>Olahraga</span>
                      </label>
                     
@@ -89,12 +89,41 @@
         </div>
         
     </div>
+
+    <div id='modal-error' class="modal ">
+        <div class="modal-body">
+            <p class="modal-title">Oops! </p>
+            <p class="modal-title">Ada Kesalahan </p>
+            <ul id="error-list" class="list-error">
+
+            </ul>
+
+            <button id="hide-modal" class="submit">Okay!</button>
+        </div>
+
+    </div>
+
+    <div  id="modal-success" class="modal ">
+        <div  class="modal-body modal-body-success">
+            <div>
+                <p class="modal-title">Yeay! </p>
+            <p class="modal-title">berhasil Mensubmit Data </p>
+            </div>
+            
+            <button id="hide-modal" class="submit">Okay!</button>
+        </div>
+
+    </div>
     
 
 <script>
     
     const submit = document.querySelector('#submit-btn')
     const reset = document.querySelector('#reset-btn')
+    const modalError = document.querySelector('#modal-error')
+    const modalSuccess = document.querySelector('#modal-success')
+    const errorCont = document.querySelector('#error-list')
+    const hideBtn = document.querySelector('#hide-modal')
 
     const checkCapital = (word) => {
       
@@ -106,6 +135,13 @@
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(email).toLowerCase());
     }
+
+    hideBtn.addEventListener("click", () => {
+        
+        modalError.style.display = 'none'
+        modalSuccess.style.display = 'none'
+        errorCont.innerHTML = ''
+    })
     
     submit.addEventListener("click", () => {
         let errorMsg = []
@@ -151,7 +187,35 @@
             errorMsg.push('Minimal panjang password adalah 7 karakter')
         }
 
-        console.log(errorMsg)
+        if(errorMsg.length != 0) {
+            
+            for(i=0;i<errorMsg.length;i++){
+                const list = document.createElement('li')
+                list.innerHTML = errorMsg[i]
+                errorCont.appendChild(list)
+            }
+            modalError.style.display = 'flex'
+        } else {
+            modalSuccess.style.display = 'flex'
+        }
+    })
+
+    reset.addEventListener("click", () => {
+        document.querySelector('#name').value = ''
+        
+        document.querySelector('#email').value = ''
+        document.querySelector('#phone').value = ''
+        document.querySelector('#username').value = ''
+        document.querySelector('#password').value = ''
+
+        const gender =  document.querySelectorAll('input[name="gender"]')
+        for(i=0; i<gender.length;i++) {
+            gender[i].checked = false
+        }
+        const hobby = document.querySelectorAll('input[name="hobby"]')
+        for(i=0; i<hobby.length;i++) {
+            hobby[i].checked = false
+        }
     })
     
 </script>
