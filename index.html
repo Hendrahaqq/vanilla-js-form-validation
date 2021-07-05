@@ -9,111 +9,118 @@
 </head>
 <body>
 
-    <div class="container">
-        <div class="form-header">
-            <p class="hero-text">Form Pendaftaran :</p>
-        </div>
-        
-        <div class="form-container" id="form-data">
-            <div class="per-form">
-                <label  for="name">Nama</label>
-                <input id="name" type="text" placeholder="masukkan nama anda (harus diawali kapital)">  
-                
-               
-            </div>
-            <div class="per-form">
-                <label  for="gender" style="display: block;">Jenis Kelamin :</label>
-                <label class="per-radio">
-                    <input type="radio" name="gender" value="man">
-                    <span>Laki-laki</span>
-                 </label>
-                 
-                 <label class="per-radio">
-                    <input type="radio" name="gender" value="woman">
-                    <span>Perempuan</span>
-                 </label>
-               
-               
-            </div>
-            <div class="per-form">
-                <label  for="gender" style="display: block;">Hobi :</label>
-               
-                    <label class="per-checkbox">
-                        <input type="checkbox"  name="hobby" value="coding">
-                        <span>Coding</span>
-                     </label>
-              
-                     <label class="per-checkbox">
-                        <input type="checkbox"  name="hobby" value="sing">
-                        <span>Menyanyi</span>
-                     </label>
-                    
-                    
-                     <label class="per-checkbox">
-                        <input type="checkbox"  name="hobby" value="sport">
-                        <span>Olahraga</span>
-                     </label>
-                    
-                    
-                
-            </div>
-            <div class="per-form">
-                <label  for="name">Email</label>
-                <input id="email" type="text" placeholder="ex: something@example.com">  
-                
-               
-            </div>
-            <div class="per-form">
-                <label  for="name">Nomor HP</label>
-                <input id="phone" type="number" placeholder="ex: 098733341234">  
-                
-               
-            </div>
-            <div class="per-form">
-                <label  for="name">Username</label>
-                <input id="username" type="text" placeholder="maksimal 10 karakter">  
-                
-               
-            </div>
-            <div class="per-form">
-                <label  for="name">Password</label>
-                <input id="password" type="password" placeholder="minimal 7 karakter">  
-                
-               
-            </div>
-
-            <div class="btn-container">
-                <button id="reset-btn" class="reset">Reset</button>
-                <button id="submit-btn" class="submit">Submit</button>
-            </div>
-        </div>
-        
-    </div>
-
-    <div id='modal-error' class="modal ">
-        <div class="modal-body">
-            <p class="modal-title">Oops! </p>
-            <p class="modal-title">Ada Kesalahan </p>
-            <ul id="error-list" class="list-error">
-
-            </ul>
-
-            <button id="hide-modal" class="submit">Okay!</button>
-        </div>
-
-    </div>
-
-    <div  id="modal-success" class="modal ">
-        <div  class="modal-body modal-body-success">
-            <div>
-                <p class="modal-title">Yeay! </p>
-            <p class="modal-title">berhasil Mensubmit Data </p>
+    <div class="main-container">
+        <div class="container">
+            <div class="form-header">
+                <p class="hero-text">Form Pendaftaran :</p>
             </div>
             
-            <button id="hide-modal" class="submit">Okay!</button>
+            <div class="form-container" id="form-data">
+                <div class="per-form">
+                    <label  for="name">Nama</label>
+                    <input id="name" type="text" placeholder="masukkan nama anda (harus diawali kapital)">  
+                    
+                   
+                </div>
+                <div class="per-form">
+                    <label  for="gender" style="display: block;">Jenis Kelamin :</label>
+                    <label class="per-radio">
+                        <input type="radio" name="gender" value="man">
+                        <span>Laki-laki</span>
+                     </label>
+                     
+                     <label class="per-radio">
+                        <input type="radio" name="gender" value="woman">
+                        <span>Perempuan</span>
+                     </label>
+                   
+                   
+                </div>
+                <div class="per-form">
+                    <label  for="gender" style="display: block;">Hobi :</label>
+                   
+                        <label class="per-checkbox">
+                            <input type="checkbox"  name="hobby" value="coding">
+                            <span>Coding</span>
+                         </label>
+                  
+                         <label class="per-checkbox">
+                            <input type="checkbox"  name="hobby" value="sing">
+                            <span>Menyanyi</span>
+                         </label>
+                        
+                        
+                         <label class="per-checkbox">
+                            <input type="checkbox"  name="hobby" value="sport">
+                            <span>Olahraga</span>
+                         </label>
+                        
+                        
+                    
+                </div>
+                <div class="per-form">
+                    <label  for="name">Email</label>
+                    <input id="email" type="text" placeholder="ex: something@example.com">  
+                    
+                   
+                </div>
+                <div class="per-form">
+                    <label  for="name">Nomor HP</label>
+                    <input id="phone" type="number" placeholder="ex: 098733341234">  
+                    
+                   
+                </div>
+                <div class="per-form">
+                    <label  for="name">Username</label>
+                    <input id="username" type="text" placeholder="maksimal 10 karakter">  
+                    
+                   
+                </div>
+                <div class="per-form">
+                    <label  for="name">Password</label>
+                    <input id="password" type="password" placeholder="minimal 7 karakter">  
+                    
+                   
+                </div>
+    
+                <div class="btn-container">
+                    <button id="reset-btn" class="reset">Reset</button>
+                    <button id="submit-btn" class="submit">Submit</button>
+                </div>
+    
+               <p>created By Hendra</p> 
+            </div>
+            
         </div>
-
+    
+        
+    
+        <div id="modal-error" class="modal ">
+            <div class="modal-body">
+                <p class="modal-title">Oops! </p>
+                <p class="modal-title">Ada Kesalahan </p>
+                <ul id="error-list" class="list-error">
+    
+                </ul>
+    
+                <button id="hide-modal" class="submit">Okay!</button>
+            </div>
+    
+        </div>
+    
+        <div  id="modal-success" class="modal ">
+            <div  class="modal-body modal-body-success">
+                <div>
+                    <p class="modal-title">Yeay! </p>
+                <p class="modal-title">berhasil Mensubmit Data </p>
+                </div>
+                
+                <button id="hide-modal-success" class="submit">Okay!</button>
+            </div>
+    
+        </div>
     </div>
+  
     
 
 <script>
@@ -123,8 +130,8 @@
     const modalError = document.querySelector('#modal-error')
     const modalSuccess = document.querySelector('#modal-success')
     const errorCont = document.querySelector('#error-list')
-    const hideBtn = document.querySelector('#hide-modal')
-
+    const hideError = document.querySelector('#hide-modal')
+    const hideSuccess = document.querySelector('#hide-modal-success')
     const checkCapital = (word) => {
       
     return word.charAt(0) === word.charAt(0).toUpperCase()
@@ -136,12 +143,19 @@
         return re.test(String(email).toLowerCase());
     }
 
-    hideBtn.addEventListener("click", () => {
-        
+    hideError.addEventListener("click", () => {
+  
         modalError.style.display = 'none'
-        modalSuccess.style.display = 'none'
+   
         errorCont.innerHTML = ''
     })
+
+    hideSuccess.addEventListener("click", () => {
+  
+  modalSuccess.style.display = 'none'
+
+
+})
     
     submit.addEventListener("click", () => {
         let errorMsg = []
