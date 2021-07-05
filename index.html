@@ -14,7 +14,7 @@
             <p class="hero-text">Form Pendaftaran :</p>
         </div>
         
-        <form class="form-container" id="form-data">
+        <div class="form-container" id="form-data">
             <div class="per-form">
                 <label  for="name">Nama</label>
                 <input id="name" type="text" placeholder="masukkan nama anda (harus diawali kapital)">  
@@ -39,18 +39,18 @@
                 <label  for="gender" style="display: block;">Hobi :</label>
                
                     <label class="per-checkbox">
-                        <input type="checkbox" name="coding">
+                        <input type="checkbox" name="hobby" value="coding">
                         <span>Coding</span>
                      </label>
               
                      <label class="per-checkbox">
-                        <input type="checkbox" name="coding">
+                        <input type="checkbox" name="hobby" value="sing">
                         <span>Menyanyi</span>
                      </label>
                     
                     
                      <label class="per-checkbox">
-                        <input type="checkbox" name="coding">
+                        <input type="checkbox" name="hobby" value="sport">
                         <span>Olahraga</span>
                      </label>
                     
@@ -86,14 +86,74 @@
                 <button id="reset-btn" class="reset">Reset</button>
                 <button id="submit-btn" class="submit">Submit</button>
             </div>
-        </form>
+        </div>
         
     </div>
     
 
 <script>
-    const name = document.querySelector('#name')
-    console.log(name)
+    
+    const submit = document.querySelector('#submit-btn')
+    const reset = document.querySelector('#reset-btn')
+
+    const checkCapital = (word) => {
+      
+    return word.charAt(0) === word.charAt(0).toUpperCase()
+
+    }
+
+    const checkEmail = (email) => {
+        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+    
+    submit.addEventListener("click", () => {
+        let errorMsg = []
+        const name = document.querySelector('#name').value
+        const gender = document.querySelectorAll('input[name="gender"]:checked')
+        const hobby = document.querySelectorAll('input[name="hobby"]:checked')
+        const email = document.querySelector('#email').value
+        const phone = document.querySelector('#phone').value
+        const username = document.querySelector('#username').value
+        const password = document.querySelector('#password').value
+
+        if(!name) {
+            errorMsg.push('Nama Tidak boleh Kosong')
+        }else if(!checkCapital(name)) {
+           errorMsg.push('Huruf Depan Nama Harus Kapital')
+        } 
+
+        if(!gender.length) {
+            errorMsg.push('Harus memilih salah satu jenis kelamin')
+        }
+
+        if(!hobby.length) {
+            errorMsg.push('Huruf Memilih salah satu hobi atau lebih')
+        }
+
+        if(!email) {
+            errorMsg.push('Email Tidak boleh kosong')
+        }else if(!checkEmail(email)) {
+            errorMsg.push('Format Email Salah')
+        }
+
+        if(!phone) {
+            errorMsg.push('Nomor HP tidak boleh kosong')
+        }
+
+        if(!username.length) {
+            errorMsg.push('Username tidak boleh kosong')
+        } else if(username.length > 10 ) {
+            errorMsg.push('Username maksimal 10 karakter')
+        }
+
+        if(password.length < 7) {
+            errorMsg.push('Minimal panjang password adalah 7 karakter')
+        }
+
+        console.log(errorMsg)
+    })
+    
 </script>
 </body>
 </html>
