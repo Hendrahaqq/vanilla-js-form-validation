@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-header">
+            <p class="hero-text">Form Pendaftaran :</p>
+        </div>
+        
+        <form class="form-container" id="form-data">
+            <div class="per-form">
+                <label  for="name">Nama</label>
+                <input id="name" type="text" placeholder="masukkan nama anda (harus diawali kapital)">  
+                
+               
+            </div>
+            <div class="per-form">
+                <label  for="gender" style="display: block;">Jenis Kelamin :</label>
+                <label class="per-radio">
+                    <input type="radio" name="gender" value="man">
+                    <span>Laki-laki</span>
+                 </label>
+                 
+                 <label class="per-radio">
+                    <input type="radio" name="gender" value="woman">
+                    <span>Perempuan</span>
+                 </label>
+               
+               
+            </div>
+            <div class="per-form">
+                <label  for="gender" style="display: block;">Hobi :</label>
+               
+                    <label class="per-checkbox">
+                        <input type="checkbox" name="coding">
+                        <span>Coding</span>
+                     </label>
+              
+                     <label class="per-checkbox">
+                        <input type="checkbox" name="coding">
+                        <span>Menyanyi</span>
+                     </label>
+                    
+                    
+                     <label class="per-checkbox">
+                        <input type="checkbox" name="coding">
+                        <span>Olahraga</span>
+                     </label>
+                    
+                    
+                
+            </div>
+            <div class="per-form">
+                <label  for="name">Email</label>
+                <input id="email" type="text" placeholder="ex: something@example.com">  
+                
+               
+            </div>
+            <div class="per-form">
+                <label  for="name">Nomor HP</label>
+                <input id="phone" type="number" placeholder="ex: 098733341234">  
+                
+               
+            </div>
+            <div class="per-form">
+                <label  for="name">Username</label>
+                <input id="username" type="text" placeholder="maksimal 10 karakter">  
+                
+               
+            </div>
+            <div class="per-form">
+                <label  for="name">Password</label>
+                <input id="password" type="password" placeholder="minimal 7 karakter">  
+                
+               
+            </div>
+
+            <div class="btn-container">
+                <button id="reset-btn" class="reset">Reset</button>
+                <button id="submit-btn" class="submit">Submit</button>
+            </div>
+        </form>
+        
+    </div>
+    
+
+<script>
+    const name = document.querySelector('#name')
+    console.log(name)
+</script>
+</body>
+</html>

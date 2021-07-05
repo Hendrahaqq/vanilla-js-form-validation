@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bg :#FAEBE0;
+    --color-form : #C9E4C5;
+    --color-text : #382933;
+    --color-header: #B5CDA3;
+    --button: #C1AC95;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.container {
+   text-align: center;
+   -webkit-box-shadow: 18px 34px 60px -13px rgba(0,0,0,0.29);
+   -moz-box-shadow: 18px 34px 60px -13px rgba(0,0,0,0.29);
+   box-shadow: 18px 34px 60px -13px rgba(0,0,0,0.29);
+   border-radius: 5px;
+}
+.form-header {
+    padding: 1rem;
+    background: var(--color-header);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-container {
+    background: var(--color-form);
+    opacity: .8;
+    border-radius: 0px 0 5px 5px;
+    min-height: 700px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+ 
+}
+
+.hero-text {
+   margin: 0 auto;
+    text-align: center;
+    color: var(--color-text);
+    font-weight: bold;
+    font-size: 1.5rem;
+    
+}
+.per-form {
+    /* display: flex;
+    align-items: center; */
+    margin-bottom: 1rem;
+}
+.per-form>label {
+    font-size: 1.25rem;
+    margin-right: 20px;
+    color: var(--color-text);
+    font-weight: 600;
+}
+.per-form>input[type=text], .per-form>input[type=number], .per-form>input[type=password] {
+    background-color: var(--color-form);
+    border: none;
+    border-bottom: 2px solid var(--color-text);
+    width: 100%;
+    /* padding: 10px; */
+}
+.per-form>input[type=text]:focus, .per-form>input[type=number]:focus, .per-form>input[type=password]:focus {
+    outline: none;
+    border: 2px solid var(--color-text);
+    font-size: 1rem;
+    color: var(--color-text);
+    
+}
+.per-radio, .per-checkbox {
+    /* margin-bottom: 10px; */
+    display: block;
+}
+.per-radio>span, .per-checkbox>span {
+    font-size: 1rem;
+}
+.btn-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+.reset, .submit {
+    padding: .5rem 3rem;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0 2rem;
+    box-shadow: 2px 3px 4px #000;
+}
+
+.reset {
+    background: var(--color-text);
+    color: var(--bg);
+    border: 2px solid var(--bg);
+    transition: all 1s;
+}
+
+.reset:hover {
+    background: var(--button);
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+    
+}
+
+
+.submit {
+    background: var(--button);
+    color: var(--color-text);
+    border: 2px solid var(--color-text);
+    transition: all 1s;
+}
+.submit:hover {
+    background: var(--color-text);
+    color: var(--bg);
+    border: 2px solid var(--bg);
+    
+}
